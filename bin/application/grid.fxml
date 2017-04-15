@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.TitledPane?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resources.Controller1">
+  <columnConstraints>
+    <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" percentHeight="5.0" prefHeight="30.0" vgrow="ALWAYS" />
+    <RowConstraints minHeight="10.0" percentHeight="95.0" prefHeight="30.0" vgrow="ALWAYS" />
+  </rowConstraints>
+  <children>
+  	<GridPane id="grid_main_page" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="0" GridPane.rowIndex="1">
+  		<columnConstraints>
+  			<ColumnConstraints hgrow="ALWAYS" percentWidth="10.0" />
+  			<ColumnConstraints hgrow="ALWAYS" percentWidth="90.0" />
+  		</columnConstraints>
+  		<rowConstraints>
+  			<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+  		</rowConstraints>
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #84A45A;" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" GridPane.vgrow="ALWAYS">
+               <children>
+                  <Button fx:id="btn1" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" style="-fx-background-color: #84A45A; -fx-text-fill: #FFFFFF;" stylesheets="@green_button.css" text="Button" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btn2" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" style="-fx-background-color: #84A45A; -fx-text-fill: #FFFFFF;" styleClass="darkoliver_button" stylesheets="@green_button.css" text="Button" />
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" style="-fx-background-color: #84A45A; -fx-text-fill: #FFFFFF;" styleClass="darkoliver_button" stylesheets="@green_button.css" text="Button" />
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" style="-fx-background-color: #84A45A; -fx-text-fill: #FFFFFF;" styleClass="darkoliver_button" stylesheets="@green_button.css" text="Button" />
+               </children>
+            </VBox>
+            <AnchorPane fx:id="main_content" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" />
+         </children>
+  	</GridPane>
+      <ToolBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #52733B;" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" />
+  </children>
+</GridPane>
