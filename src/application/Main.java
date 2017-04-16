@@ -13,9 +13,8 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Main.class.getResource("grid.fxml"));
+			loader.setLocation(Main.class.getResource("main_layout.fxml"));
 			GridPane root = loader.load();
-			
 			Scene scene = new Scene(root, 200, 250);
 ////			TreeView<String> tview = (TreeView<String>)scene.lookup("#tree");
 //			Node icon = new Circle();

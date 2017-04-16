@@ -13,9 +13,9 @@ import javafx.scene.control.TabPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Region;
 
-public class Controller1 implements Initializable{
+public class Controller_Main implements Initializable{
 	@FXML
-	private Button btn1, btn2;
+	private Button btn1, btn2, btn3;
 	@FXML
 	private AnchorPane main_content;
 	
@@ -25,8 +25,7 @@ public class Controller1 implements Initializable{
 		btn1.setOnMouseClicked(new EventHandler(){
 			@Override
 			public void handle(Event arg0) {
-				FXMLLoader loader2 = new FXMLLoader();
-				loader2.setLocation(this.getClass().getResource("/application/btn1_subpage.fxml"));
+				FXMLLoader loader2 = getLoader("/application/btn1_subpage.fxml");
 				AnchorPane ap = null;
 				try{
 					ap = (AnchorPane)loader2.load();
@@ -38,8 +37,7 @@ public class Controller1 implements Initializable{
 		btn2.setOnMouseClicked(new EventHandler(){
 			@Override
 			public void handle(Event arg0) {
-				FXMLLoader loader = new FXMLLoader();
-				loader.setLocation(this.getClass().getResource("/application/piechart.fxml"));
+				FXMLLoader loader = getLoader("/application/piechart.fxml");
 				TabPane gp_chart = null;
 				try{
 					gp_chart = loader.load();
@@ -48,8 +46,23 @@ public class Controller1 implements Initializable{
 			}
 			
 		});
+		btn3.setOnMouseClicked(new EventHandler(){
+
+			@Override
+			public void handle(Event arg0) {
+				FXMLLoader loader =getLoader("");
+			}
+			
+		});
 	}
 	
+	private FXMLLoader getLoader(String URL){
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(this.getClass().getResource(URL));
+		return loader;
+	}
+	
+	//Set main pane to user switch
 	private void setMainContent(AnchorPane mainap, Region node){
 		node.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
 		mainap.getChildren().clear();
