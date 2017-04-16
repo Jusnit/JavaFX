@@ -25,7 +25,7 @@ public class Controller_Main implements Initializable{
 		btn1.setOnMouseClicked(new EventHandler(){
 			@Override
 			public void handle(Event arg0) {
-				FXMLLoader loader2 = getLoader("/application/btn1_subpage.fxml");
+				FXMLLoader loader2 = getLoader("/layout/btn1_subpage.fxml");
 				AnchorPane ap = null;
 				try{
 					ap = (AnchorPane)loader2.load();
@@ -37,7 +37,7 @@ public class Controller_Main implements Initializable{
 		btn2.setOnMouseClicked(new EventHandler(){
 			@Override
 			public void handle(Event arg0) {
-				FXMLLoader loader = getLoader("/application/piechart.fxml");
+				FXMLLoader loader = getLoader("/layout/piechart.fxml");
 				TabPane gp_chart = null;
 				try{
 					gp_chart = loader.load();
@@ -50,7 +50,12 @@ public class Controller_Main implements Initializable{
 
 			@Override
 			public void handle(Event arg0) {
-				FXMLLoader loader =getLoader("");
+				FXMLLoader loader =getLoader("/layout/dataTable.fxml");
+				AnchorPane tableroot = null;
+				try{
+					tableroot = (AnchorPane)loader.load();
+				}catch(Exception e){System.out.println(e.getMessage());}
+				setMainContent(main_content, tableroot);
 			}
 			
 		});

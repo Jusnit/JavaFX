@@ -5,7 +5,7 @@ import java.sql.*;
 public class MySQLCreate {
    // JDBC driver name and database URL
    static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
-   static final String DB_URL = "jdbc:mysql://localhost/";
+   static final String DB_URL = "jdbc:mysql://localhost:3306/";
 
    //  Database credentials
    static final String USER = "username";
@@ -21,15 +21,15 @@ public class MySQLCreate {
 	   Connection conn = null;
 	   Statement st = null;
 	   try{
-		   conn = DriverManager.getConnection(DB_URL);
+		   conn = DriverManager.getConnection(DB_URL, "root", "");
 		   System.out.println("Connecting....");
 		   st = conn.createStatement();
-		   String sql = "CREATE DATABASE STORAGE";
+		   String sql = "CREATE DATABASE "+ s;
 		   st.executeUpdate(sql);
 		   System.out.println("Database Create succesfully....");
 		   
 	   }catch(Exception e){
-		   
+		   System.out.println(e.getMessage());
 	   }finally{
 		   try{
 			   if(st != null)
