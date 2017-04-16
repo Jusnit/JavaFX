@@ -1,5 +1,6 @@
 package application;
 	
+import database.MySQLCreate;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -13,10 +14,10 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Main.class.getResource("grid.fxml"));
+			loader.setLocation(Main.class.getResource("/layout/main_layout.fxml"));
 			GridPane root = loader.load();
-			
 			Scene scene = new Scene(root, 200, 250);
+
 ////			TreeView<String> tview = (TreeView<String>)scene.lookup("#tree");
 //			Node icon = new Circle();
 //			TreeItem<String> rootItem = new TreeItem("Level1", icon);
